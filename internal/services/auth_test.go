@@ -71,7 +71,7 @@ func TestAuthService(t *testing.T) {
 		err := serviceAuth.SignUp(context.Background(), "test", "test")
 		assert.NoError(t, err)
 
-		at, rt, err := serviceAuth.SignIn(context.Background(), "test", "test")
+		at, rt, _, err := serviceAuth.SignIn(context.Background(), "test", "test")
 		assert.NoError(t, err)
 
 		assert.NotEmpty(t, rt)
